@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Window Object Model</title>
+
+</head>
+<body>
+  <script type="text/javascript">
+    function msg1()
+    {
+     alert("Hello,  This is a Alert Box");
+    }
+    function msg2(){
+        var v= prompt("What is your name?");
+        alert("I am "+v);
+    }
+    function msg3(){
+        open("https://www.youtube.com/");
+    }
+    function msg4(){
+        setTimeout(
+        function(){
+        alert("Welcome to youtube after 2 seconds")
+        },2000);
+    }
+    function msg5() {
+        confirm("Press a button!");
+    }
+    </script>
+    <input type="button" value="Alert" onclick="msg1()"/>
+    <input type="button" value="Prompt" onclick="msg2()"/>
+    <input type="button" value="Open" onclick="msg3()"/>
+    <input type="button" value="TimeOut" onclick="msg4()"/>
+    <input type="button" value="Confirm" onclick="msg5()"/>
+    <input type="button" value="Print" onclick="window.print()"/>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Celsius to Fahrenheit Converter</title>
+    <script>
+        // This JavaScript function converts temperature from Celsius to Fahrenheit
+        function celsiusToFahrenheit(celsius) {
+            var fahrenheit = (celsius * 1.8) + 32;
+            return fahrenheit;
+        }
+    </script>
+</head>
+<body>
+    <h1>Celsius to Fahrenheit Converter</h1>
+    <p>Enter a temperature in Celsius:</p>
+    <input type="number" id="celsiusInput">
+    <button onclick="convert()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        // This JavaScript function is called when the "Convert" button is clicked
+        function convert() {
+            var celsius = document.getElementById("celsiusInput").value;
+            var fahrenheit = celsiusToFahrenheit(celsius);
+            var result = document.getElementById("result");
+            result.innerHTML = celsius + " degrees Celsius is " + fahrenheit + " degrees Fahrenheit.";
+        }
+    </script>
+</body>
+</html>

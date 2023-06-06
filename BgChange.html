@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello, world!</title>
+
+</head>
+<body>
+  <button id="h1" onclick="myFunction()">Click me to change my color!</button>
+  <script>
+    function myFunction() {
+        console.log(random_color());
+     document.body.style.backgroundColor = '#'+random_color();
+  }
+  function random_color(){
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+  }
+  </script>
+</body>
+</html>

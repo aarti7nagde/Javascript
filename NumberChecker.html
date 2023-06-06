@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Checker</title>
+    <script>
+        function checkArmstrongNumber(number) {
+            var sum = 0;
+            var temp = number;
+            while (temp > 0) {
+                var digit = temp % 10;
+                sum += Math.pow(digit, 3);
+                temp = Math.floor(temp / 10);
+            }
+            return number == sum;
+        }
+        function checkPalindromeNumber(number) {
+            var str = number.toString();
+            var reverseStr = str.split('').reverse().join('');
+            return str == reverseStr;
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Checker</h1>
+    <p>Enter a number to check:</p>
+    <input type="number" id="numberInput">
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var result = document.getElementById("result");
+
+            if (checkArmstrongNumber(number)) {
+                result.innerHTML = number + " is an Armstrong number.";
+            } else if (checkPalindromeNumber(number)) {
+                result.innerHTML = number + " is a palindrome number.";
+            } else {
+                result.innerHTML = number + " is neither an Armstrong number nor a palindrome number.";
+            }
+        }
+    </script>
+</body>
+</html>
